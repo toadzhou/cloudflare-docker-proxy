@@ -28,7 +28,10 @@ TARGET_UPSTREAM = ""
 
 [env.staging]
 name = "cloudflare-docker-proxy-staging"
-route = { pattern = "docker-staging.bhq.sh.cn", custom_domain = true }
+# route = { pattern = "docker-staging.bhq.sh.cn", custom_domain = true }
+routes = [
+  { pattern = "docker-staging.bhq.sh.cn", custom_domain = true }
+]
 
 [env.staging.vars]
 MODE = "staging"
