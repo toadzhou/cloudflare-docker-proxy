@@ -85,7 +85,7 @@
 </head>
 <body>
 <div class="container">
-<center><h2><a href="https://bhq.sh.cn" target="_blank">自用</a> Docker Hub 镜像加速</h2></center>
+<center><h2>Docker Hub 镜像加速</h2></center>
 <h3>为了加速镜像拉取，使用以下命令设置<b>registry mirror</b></h3>
 <pre><code>
 mkdir -p /etc/docker</code><button class="copy-button" onclick="copyCode(this)">复制代码</button></pre>
@@ -104,6 +104,21 @@ systemctl restart docker</code><button class="copy-button" onclick="copyCode(thi
 docker pull docker.bhq.sh.cn/library/mysql:8.0</code><button class="copy-button" onclick="copyCode(this)">复制代码</button></pre>
 <p>说明：library是一个特殊的命名空间，它代表的是官方镜像。</p>
 </div>
+
+<p><h3>其它镜像源：</h3></p>
+<pre><code>
+docker.bhq.sh.cn: "https://registry-1.docker.io",
+quay.bhq.sh.cn: "https://quay.io",
+gcr.bhq.sh.cn: "https://gcr.io",
+k8s-gcr.bhq.sh.cn: "https://k8s.gcr.io",
+k8s.bhq.sh.cn: "https://registry.k8s.io",
+ghcr.bhq.sh.cn: "https://ghcr.io",
+cloudsmith.bhq.sh.cn: "https://docker.cloudsmith.io",
+ecr.bhq.sh.cn: "https://public.ecr.aws",
+docker-staging.bhq.sh.cn: "https://registry-1.docker.io"</code><button class="copy-button" onclick="copyCode(this)">复制代码</button></pre>
+<p>请按对应源自行修改</p>
+</div>
+
 <div class="footer">
     &copy; <a href="https://bhq.sh.cn" target="_blank">XLABS</a>自建镜像，请勿滥用。
 </div>
