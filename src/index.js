@@ -1,15 +1,4 @@
 import DOCS from './tips.html'
-// return tips.html
-if (url.pathname === "/") {
-  return new Response(
-      JSON.stringify({
-        routes: {'name':123},
-      }),
-      {
-        status: 200,
-      }
-    );
-}
 
 addEventListener("fetch", (event) => {
   event.passThroughOnException();
@@ -46,6 +35,16 @@ function routeByHosts(host) {
 async function handleRequest(request) {
   const url = new URL(request.url);
   const upstream = routeByHosts(url.hostname);
+ 
+  // return tips.html
+  if (url.pathname === "/") {
+    return new Response(DOCS, {
+      status: 200,
+      headers: {
+        "content-type": "text/html"
+      }
+    });
+  }
   if (upstream === "") {
     return new Response(
       JSON.stringify({
