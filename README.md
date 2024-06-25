@@ -38,7 +38,7 @@
    };
    ```
 3. 设置docker加速源
-   ```
+   ```Bash
    sudo mkdir -p /etc/docker
    
    sudo tee /etc/docker/daemon.json <<EOF
