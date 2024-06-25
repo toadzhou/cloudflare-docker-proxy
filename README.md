@@ -37,19 +37,19 @@
      "ghcr.bhq.sh.cn": "https://ghcr.io",
    };
    ```
-   3. 设置docker加速源
-      ```
-      sudo mkdir -p /etc/docker
-      
-      sudo tee /etc/docker/daemon.json <<EOF
-      {
-          "registry-mirrors": ["https://docker.ckyl.me"]
-      }
-      EOF
+3. 设置docker加速源
+   ```
+   sudo mkdir -p /etc/docker
+   
+   sudo tee /etc/docker/daemon.json <<EOF
+   {
+       "registry-mirrors": ["https://docker.ckyl.me"]
+   }
+   EOF
 
-      
-      sudo systemctl daemon-reload
-      
-      sudo systemctl restart docker
-      ```
+   
+   sudo systemctl daemon-reload
+   
+   sudo systemctl restart docker
+   ```
 
