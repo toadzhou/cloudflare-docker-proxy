@@ -1,12 +1,14 @@
 import DOCS from './tips.html'
 // return tips.html
 if (url.pathname === "/") {
-  return new Response("test", {
-    status: 200,
-    headers: {
-      "content-type": "text/html"
-    }
-  });
+  return new Response(
+      JSON.stringify({
+        routes: {'name':123},
+      }),
+      {
+        status: 200,
+      }
+    );
 }
 
 addEventListener("fetch", (event) => {
