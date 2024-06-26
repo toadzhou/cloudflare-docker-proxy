@@ -43,7 +43,7 @@
    
    sudo tee /etc/docker/daemon.json <<EOF
    {
-       "registry-mirrors": ["https://bhq.sh.cn"]
+       "registry-mirrors": ["https://docker.bhq.sh.cn"]
    }
    EOF
 
